@@ -82,7 +82,7 @@ nav ul li:hover{
 }
 
 section{
-  height: 100vh;
+  height: 120vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,7 +92,7 @@ section{
   background-color: var(--bg-color);
 }
 
-aside p::after{
+#home aside p::after{
   content: '';
   display: block;
   height: 1px;
@@ -101,13 +101,82 @@ aside p::after{
   margin: 20px 0;
 }
 
+h1{
+  color: var(--txt-color);
+}
+
+#home h1::after{
+  content: '|';
+  margin-left: 2px;
+  animation: opacity .5s infinite;
+}
+
+@keyframes opacity{
+  0%, 100%{
+    opacity: 0;
+  }
+
+  50%{
+    opacity: 1;
+  }
+
+}
+
+.box{
+  max-width: 94%;
+  background-color: #e5f3d7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+  border-radius: 15px;
+}
+
+.box p{
+  font-size: .8rem;
+  color: var(--txt-color);
+}
+
+.box aside{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.box aside .number{
+  font-size: 2rem;
+  color: var(--primary);
+  font-weight: 500;
+}
+
+
+[data-scroll]{
+  animation: appear 2s;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+@keyframes appear{
+  from{
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @media(max-width: 768px){
   nav ul{
     flex-direction: column;
     gap: 40px;
     position: fixed;
     top: 140px;
-    background-color: var(--accent);
+    background-color: rgb(206, 233, 206);
     padding: 20px;
     border-radius: 10px;
     margin-right: -200px;
@@ -122,7 +191,8 @@ aside p::after{
     top: -1px;
     height: 70px;
     position: fixed;
-    border-bottom: 1px solid grey;
+    border-bottom: 1px solid var(--txt-color);
+    z-index: 10001;
   }
   nav{
     gap: 80%;
