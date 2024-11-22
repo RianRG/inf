@@ -17,7 +17,7 @@
 
 :root{
   --txt-color: #1e1007;
-  --bg-color: #fefcfb;
+  --bg-color: #fff;
   --primary: #d43f3f;
   --second: #bee597;
   --accent: #89dc6f;
@@ -92,6 +92,7 @@ section{
   background-color: var(--bg-color);
 }
 
+
 #home aside p::after{
   content: '';
   display: block;
@@ -101,7 +102,7 @@ section{
   margin: 20px 0;
 }
 
-h1{
+h1, p{
   color: var(--txt-color);
 }
 
@@ -136,7 +137,6 @@ h1{
 
 .box p{
   font-size: .8rem;
-  color: var(--txt-color);
 }
 
 .box aside{
@@ -153,16 +153,33 @@ h1{
 }
 
 
-[data-scroll]{
+[data-scroll="left"]{
   animation: appear 2s;
   animation-timeline: view();
   animation-range: entry 0;
 }
 
+[data-scroll="right"]{
+  animation: appearRight 2s;
+  animation-timeline: view();
+  animation-range: entry 0;
+}
+
+@keyframes appearRight{
+  from{
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  to{
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 @keyframes appear{
   from{
     opacity: 0;
-    transform: translateX(100px);
+    transform: translateX(200px);
   }
   to{
     opacity: 1;
