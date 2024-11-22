@@ -83,7 +83,7 @@ nav ul li:hover{
 }
 
 section{
-  height: 120vh;
+  height: 110vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,6 +92,30 @@ section{
   padding: 20px;
   background-color: var(--bg-color);
   margin-bottom: 200px;
+}
+
+.infoTime{
+  background-color: rgb(238, 211, 211);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.infoTime::before{
+  content: '!';
+  position: absolute;
+  font-size: 3rem;
+  font-weight: 600;
+  transform: translateY(-60px);
+  rotate: -12deg;
+}
+
+.infoTime::after{
+  content: '!';
+  position: absolute;
+  font-size: 2rem;
+  font-weight: 600;
+  transform: translateX(40px);
+  rotate: 12deg;
 }
 
 
@@ -104,7 +128,7 @@ section{
   margin: 20px 0;
 }
 
-h1, p{
+h1, p, h2{
   color: var(--txt-color);
 }
 
@@ -172,7 +196,6 @@ footer{
   align-items: start;
   flex-direction: column;
   padding: 20px;
-  margin-top: 300px;
   gap: 80px;
 }
 
@@ -203,7 +226,7 @@ footer ul li p{
   text-align: center;
 }
 
-#about span{
+span{
   font-weight: 800;
   border-bottom: 1px solid red;
 }
@@ -219,6 +242,38 @@ footer ul li{
   color: var(--txt-color);
   font-weight: 700;
   border-bottom: 1.7px solid var(--txt-color);
+}
+
+#guide .card{
+  overflow: hidden;
+  clip-path: polygon(0 27.5%, 100% 0, 100% 74%, 0 99%);
+} 
+
+#guide .card img{
+  max-width: 120%;
+}
+
+#guide{
+  height: 300vh;
+}
+
+#guide h2::after{
+  content: '';
+  display: block;
+  background-color: var(--accent);
+  width: 80%;
+  height: 15px;
+  margin-top: -30px;
+  margin-left: 30px;
+}
+
+#guide h2:nth-child(odd)::after{
+  background-color: rgb(230, 194, 194);
+  margin-top: -15px;
+}
+
+#guide p{
+  font-size: .9rem;
 }
 
 @media(max-width: 768px){
