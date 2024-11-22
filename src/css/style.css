@@ -84,7 +84,7 @@ nav ul li:hover{
 }
 
 section{
-  height: 120vh;
+  height: 130vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -253,7 +253,7 @@ footer ul li{
 }
 
 #guide{
-  height: 300vh;
+  height: 250vh;
 }
 
 #guide h2{
