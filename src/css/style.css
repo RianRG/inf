@@ -84,7 +84,8 @@ nav ul li:hover{
 }
 
 section{
-  height: 130vh;
+  min-height: 120vh;
+  max-height: 250vh;
   display: flex;
   justify-content: center;
   align-items: center;
