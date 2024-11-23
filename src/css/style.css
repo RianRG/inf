@@ -294,15 +294,14 @@ footer ul li{
 @media(max-width: 768px){
   nav ul{
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
     position: fixed;
     top: 140px;
     background-color: rgb(206, 233, 206);
     padding: 20px;
     border-radius: 10px;
-    margin-right: -200px;
+    margin-right: -250px;
     transition: .4s;
-    width: 100px;
   }
 
   nav ul.active{
