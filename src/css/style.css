@@ -24,6 +24,18 @@
   --light-green: #e5f3d7;
 
 }
+
+.alert{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary);
+  z-index: 10002;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
 .hamburger{
   display: none;
 }
@@ -34,6 +46,14 @@
 
 body{
   overflow-x: hidden;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 header{
@@ -93,6 +113,12 @@ section{
   gap: 80px;
   padding: 20px;
   background-color: var(--bg-color);
+}
+
+#home aside img{
+  max-width: 100%;
+  z-index: 0;
+  box-shadow: 0 10px var(--primary), 0 30px var(--light-green), 0 50px var(--second), 0 80px var(--accent);
 }
 
 .infoTime{
@@ -197,6 +223,7 @@ footer{
   flex-direction: column;
   padding: 20px;
   gap: 80px;
+  margin-top: 20%;
 }
 
 
@@ -290,6 +317,11 @@ footer ul li{
   font-size: .7rem;
 }
 
+@media(max-width: 800px){
+  .alert{
+    display: none;
+  }
+}
 
 @media(max-width: 768px){
   nav ul{
