@@ -21,7 +21,7 @@ const macchine = (text) =>{
   letters.forEach((cont, k) =>{
     setTimeout(letter =>{
       h1.innerHTML+=cont;
-    }, 120*k);
+    }, 80*k);
   })
 }
 
