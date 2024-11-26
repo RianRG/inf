@@ -156,6 +156,9 @@ section{
 }
 h1, p, h2{
   color: var(--txt-color);
+  text-align: justify;
+  text-justify: inter-word;
+  hyphens: auto;
 }
 
 #home h1::after{
