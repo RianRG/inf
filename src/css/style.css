@@ -42,7 +42,6 @@
 .logo img{
   max-width: 80px;
   cursor: pointer;
-  margin-right: 18px;
 }
 
 body{
@@ -54,6 +53,7 @@ main{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 100px;
 }
 
 header{
@@ -337,19 +337,20 @@ footer ul li{
   }
 
   nav ul.active{
-    margin-right: -50px;
+    margin-right: -20px;
   }
   header{
     top: -1px;
     height: 70px;
     position: fixed;
     z-index: 10001;
+    padding: 0 10px;
+    padding-right: 40px;
   }
   nav{
-    gap: 80%;
     flex-direction: row-reverse;
-    position: relative;
-    bottom: 8pxpx;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .hamburger{
@@ -360,7 +361,6 @@ footer ul li{
     z-index: 1000;
     transition: .4s;
     position: relative;
-    left: 55px;
     bottom: 20px;
   }
 
